@@ -1,0 +1,259 @@
+:root{
+    --vermelho: #E50914;
+    --preta: #141414;
+    --branco: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Elementos base*/
+body{
+    background: var(--preta);
+    font-family:'Arial', Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    
+}
+
+.marvel{
+    
+    margin-left: 5px;
+    color: var(--branco);
+    font-family: 'Arial Black', Times;
+    font-size: 30px;
+}
+
+.terramedia{
+    
+    margin-left: 5px;
+    color: var(--branco);
+    font-family: 'Arial Black', Times;
+    font-size: 30px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #FFF;
+}
+
+/*Filme Principal*/
+.filme-principal{
+    font-size: 20px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)), url('/img/fundo-thewitcher.jpg');
+    height: 800px;
+    background-size:cover;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+}
+.titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 30px;
+    margin-right: 60px;
+}
+
+.filme-principal .container{
+    width: 60%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
+
+
+
+/*Abrir uma janela por cima para Tocar o Trailer*/
+
+/*.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.fechar {
+  position: absolute;
+  width: 30px;
+  right: -15px;
+  top: -20px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 5px;
+  background: #ff4545;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #8d0000;
+}
+
+.modal > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 15px 20px;
+  background: #fff;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}*/
+
+#mask {
+  
+display:none;
+position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgba(0,0,0,0.9);
+  z-index: 100;
+  opacity:10;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+#boxes .window {
+position:absolute;
+width:900px;
+height:500px;;
+display:none;
+z-index:9999;
+padding:10px;
+color: var(--branco);
+filter:brightness(100%), opacity(100%);
+}
+
+/* Personalize a janela modal aqui. Você pode adicionar uma imagem de fundo. */
+#boxes #dialog1 #dialog2 #dialog3 #dialog4 #dialog5 #dialog6 #dialog7 #dialog8 #dialog9  {
+width:900px;
+height:500px;
+font-size: 18px;
+
+}
+/* posiciona o link para fechar a janela */
+.close {
+display:block; 
+text-align:right;
+position: absolute;
+width: 35px;
+right: -15px;
+top: -20px;
+
+line-height: 35px;
+margin-top: 9px;
+background: #ff4545;
+border-radius: 50%;
+font-size: 33px;
+color: black;
+
+}  
+
+
+/*Custom SINOPSE*/
+
+.titulofilme{
+    font-family: 'Times New Roman', Times, serif;
+    font-style:oblique ;
+}
+.datafilme{
+    font-family:Arial;
+    font-size: 14px;
+    color:#FFF;
+}
+.frase{
+    font-family:'Times New Roman';
+    color:#AAA;
+    font-style:oblique ;
+}
+
+.box-ator{
+
+    height: 82%;
+    width: 82%;
+    font-size: 14px;
+}
+
+.ator{
+    font-family:Arial, bold;
+    font-size: 16px;
+}
+
+.img-ator{
+    border-radius: 8%;
+}
